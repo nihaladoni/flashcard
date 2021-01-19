@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Fjalla One", sans-serif;
+    margin: 0;
+    text-align: center;
+    max-height: 100vh;
+
+    /* pattern */
+    --stripe: #cfd8dc;
+    --bg: #e1e1e1;
+
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+    linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
+}
+
+.cards-container {
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 180px;
+    height: 180px;
+    perspective: 1000px;
+    margin: 7px;
+    border-radius: 10px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    border-radius: 10px;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.flip-card-front {
+    background-color: #f5ede0;
+    color: orange;
+    font-size: 1.3rem;
+}
+
+.flip-card-back {
+    background-color: orange;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 1.3rem;
+}
