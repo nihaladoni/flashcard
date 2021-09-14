@@ -2,4 +2,3 @@
 
 - HTML
 - CSS
-- Javscript
