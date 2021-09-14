@@ -1,1 +1,5 @@
-### ✌ see live at : https://nihaladoni.github.io/flashcard/
+### Technologies Used :
+
+- HTML
+- CSS
+- Javscript
